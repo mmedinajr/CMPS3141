@@ -1,0 +1,60 @@
+<!--CMPS3141-HCI - AS1-24S1
+Collaborators:
+Date:
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMPS3141 Grade Calculator</title>
+    <script src="index.js" type="module"></script>
+</head>
+<body>
+    <div id="grade_calc">
+        <h2>CMPS3141 Grade Calculator</h2>
+
+        <!-- Project Grade Input -->
+        <div>
+            <label for="project">Project:</label>
+            <input id="project" type="number" min="0" max="100" v-model="assessments.project" /> / 100
+        </div>
+
+        <!-- Final Exam Grade Input -->
+        <div>
+            <label for="finalExam">Final Exam:</label>
+            <input id="finalExam" type="number" min="0" max="100" v-model="assessments.finalExam" /> / 100
+        </div>
+
+        <!-- Test Grades Inputs -->
+        <div>
+            <label>Tests:</label>
+            <div v-for="(test, index) in tests" :key="index">
+                <label :for="'test' + (index + 1)">Test {{ index + 1 }}:</label>
+                <input :id="'test' + (index + 1)" type="number" min="0" max="100" v-model="tests[index]" /> / 100
+            </div>
+            <button @click="addTest()">Add Test</button>
+        </div>
+
+        <!-- Homework Grades Inputs -->
+        <div>
+            <label>Homeworks:</label>
+            <div v-for="(homework, index) in homeworks" :key="index">
+                <label :for="'homework' + (index + 1)">Homework {{ index + 1 }}:</label>
+                <input :id="'homework' + (index + 1)" type="number" min="0" max="100" v-model="homeworks[index]" /> / 100
+            </div>
+            <button @click="addHomework()">Add Homework</button>
+        </div>
+
+        <!-- Projected Grade Display -->
+        <div>
+            Projected class grade: {{ calculatedGrade }}
+        </div>
+        <br>
+        <button @click="calculateGrade()">Calculate Grade</button>
+    </div>
+
+</body>
+</html>
