@@ -1,0 +1,24 @@
+Most Important Usability Dimension:
+
+Efficiency is the most important usability dimension for this app. Since Neo and Trinity are using the spreadsheet regularly to manage shared expenses, they need a solution that allows them to input, track, and calculate balances quickly and accurately.
+Usability Problems and Affected Dimensions:
+
+Manual Data Entry (Efficiency)
+
+Problem: The spreadsheet requires manual entry of each transaction, which is time-consuming and prone to errors.
+Efficiency Impact: It decreases efficiency, especially when there are many transactions to record and split.
+Complex Formulas (Learnability & Safety)
+
+Problem: The formulas used to calculate who owes whom can be complex and difficult to understand for users not familiar with spreadsheet formulas.
+Learnability Impact: Users might struggle to learn how to correctly input data without breaking the formulas.
+Safety Impact: Incorrect formula modifications can lead to miscalculations, which might go unnoticed and cause disputes.
+Lack of Automation (Efficiency & Safety)
+
+Problem: The spreadsheet does not automate the detection of anomalies (e.g., paying for joint expenses with a personal card). Users must manually track these situations.
+Efficiency Impact: This manual tracking slows down the process and adds complexity.
+Safety Impact: Missing or incorrectly tracking an anomaly could result in inaccurate balances.
+User Interface Complexity (Learnability & Efficiency)
+
+Problem: The spreadsheet might have a cluttered interface with many columns and rows, making it difficult to quickly find and understand relevant information.
+Learnability Impact: New users or those unfamiliar with the specific setup might find it challenging to navigate the spreadsheet.
+Efficiency Impact: The complexity can slow down the process of recording and reviewing transactions.

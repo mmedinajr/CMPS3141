@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+</head>
+<body>
+
+    <header>
+        <h1>Neo & Trinity's Expense Tracker</h1>
+    </header>
+
+    <main>
+        <!-- Overview of Total Balances -->
+        <section id="balances">
+            <h2>Balances</h2>
+            <p>Neo owes Trinity: <strong>$50.00</strong></p>
+            <p>Trinity owes Neo: <strong>$30.00</strong></p>
+            <p>Net Balance: <strong>Neo owes Trinity $20.00</strong></p>
+        </section>
+
+        <!-- Transaction Input Form -->
+        <section id="add-transaction">
+            <h2>Add a New Transaction</h2>
+            <form id="transaction-form">
+                <label for="transaction-date">Date:</label>
+                <input type="date" id="transaction-date" name="transaction-date" value="2024-08-21"><br><br>
+
+                <label for="transaction-type">Transaction Type:</label>
+                <select id="transaction-type" name="transaction-type">
+                    <option value="personal">Personal Expense</option>
+                    <option value="joint">Joint Expense</option>
+                </select><br><br>
+
+                <label for="payer">Paid By:</label>
+                <select id="payer" name="payer">
+                    <option value="neo">Neo</option>
+                    <option value="trinity">Trinity</option>
+                    <option value="joint-card">Joint Card</option>
+                </select><br><br>
+
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter amount" required><br><br>
+
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" placeholder="E.g., Grocery shopping"><br><br>
+
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+
+        <!-- Transaction History -->
+        <section id="transaction-history">
+            <h2>Transaction History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Payer</th>
+                        <th>Amount</th>
+                        <th>Description</th>
+                        <th>Adjustments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-08-20</td>
+                        <td>Joint</td>
+                        <td>Neo</td>
+                        <td>$100.00</td>
+                        <td>House Rent</td>
+                        <td>Neo: -$50.00, Trinity: -$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>2024-08-19</td>
+                        <td>Personal</td>
+                        <td>Trinity</td>
+                        <td>$40.00</td>
+                        <td>Dinner Out</td>
+                        <td>Trinity: -$40.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
